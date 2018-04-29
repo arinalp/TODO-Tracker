@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!---->
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!---->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Edit TODO</title>
+  </head>
+  <body>
+
+    <!---->   
+    <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="list-of-all-todos.html">TODO-Tracker</a>
+        <a class="navbar-brand" href="imprint.html">Imprint</a>
+    </nav>
+
+    <!---->
+      <div class="container">
+          <h2>Edit an existing TODO</h2>
+          <div class="form-group">
+              <label for="desc">Description:</label>
+              <input type="text" class="form-control" id="desc" value="Existing description">
+          </div>
+          <div class="form-group">
+              <label for="dl">Deadline:</label>
+              <input type="date" class="form-control" id="dl" value="2018-04-29">
+          </div>
+          <div class="form-group">
+              <label for="prg">Achievement:</label>
+              <input type="number" class="form-control" id="prg" value=50 max=100 min=0>
+          </div>
+          <button type="button" class="btn btn-primary">Save your changes</button>
+      </div>
+    <!---->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
