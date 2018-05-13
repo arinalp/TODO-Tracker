@@ -1,0 +1,40 @@
+<h2>Create TODO</h2>
+<form action="/addTODO" method="POST">
+  <div class="form-group">
+    <label for="desc">Description:</label>
+    <input
+        id="desc"
+        type="text"
+        class="form-control"
+        name="description"
+        placeholder="TODO"
+        maxlength=160
+        required
+    >
+  </div>
+  <div class="form-group">
+    <label for="ddln">Deadline:</label>
+    <input
+        id="ddln"
+        type="date"
+        class="form-control"
+        name="deadline"
+        placeholder="YYYY-MM-DD"
+        required
+    >
+    <span class="validity"></span>
+  </div>
+  <div class="form-group">
+    <label for="prgr">Progress:</label>
+    <input
+        id="prgr"
+        type="number"
+        class="form-control"
+        name="progress"
+        placeholder="Progress"
+        value="0"
+        max=100 min=0
+    >
+  </div>
+  <input class="btn btn-primary" type="submit" value="Save">
+</form>

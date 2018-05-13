@@ -1,0 +1,28 @@
+<table id="table" class="table table-hover table-sm">
+  <thead>
+  <tr>
+    <th scope="col">Description</th>
+    <th scope="col">Date</th>
+    <th scope="col">Progress</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- iterate todos -->
+  {{#each todos}}
+    <tr>
+      <td>{{description}}</td>
+      <td>{{formatDate deadline}}</td>
+      <td>{{progress}}</td>
+      <td>
+        <form action="/editTODO" method="POST">
+          <button type="submit" name="id" value="{{_id}}" class="btn btn-primary">Edit</button>
+        </form>
+        <form action="/deleteTODO" method="POST">
+          <button type="submit" name="id" value="{{_id}}" class="btn btn-primary">Delete</button>
+        </form>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+<a class="btn btn-primary" href="/addTODO">Create TODO</a>

@@ -1,0 +1,41 @@
+<h2>Edit TODO</h2>
+<form action="/updateTODO" method="POST">
+  <div class="form-group">
+    <label for="desc">Description:</label>
+    <input
+        id="desc"
+        type="text"
+        class="form-control"
+        name="description"
+        placeholder="TODO"
+        value="{{description}}"
+        maxlength=160
+    >
+  </div>
+  <div class="form-group">
+    <label for="ddln">Deadline:</label>
+    <input
+        id="ddln"
+        type="date"
+        class="form-control"
+        name="deadline"
+        placeholder="Deadline"
+        value="{{formatDate deadline}}"
+        required
+    >
+    <span class="validity"></span>
+  </div>
+  <div class="form-group">
+    <label for="prgr">Progress:</label>
+    <input
+        id="prgr"
+        type="number"
+        class="form-control"
+        name="progress"
+        placeholder="Progress"
+        value="{{progress}}"
+        max=100 min=0
+    >
+  </div>
+  <button type="submit" name="id" value="{{_id}}" class="btn btn-primary">Save changes</button>
+</form>
